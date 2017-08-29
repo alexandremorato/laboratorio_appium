@@ -1,0 +1,3 @@
+tap: --tag @tap --format html --out report/tap.html --format pretty
+swipeone: --tag @swipe_one --format html --out report/swipeone.html --format pretty
+swipetwo: --tag @swipe_two --format html --out report/swipetwo.html --format pretty
