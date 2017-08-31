@@ -5,18 +5,10 @@ def swipe(num)
   @gestos = Appium::TouchAction.new
   wait(10){find_element(:id, 'br.com.dafiti:id/toolbar_title').displayed?}
 
-case novo_num
-when 1
-  @gestos.swipe(:start_x => 965, :start_y => 973, :end_x => 235, :end_y => 1047, :duration => 1000).perform
-when 2
-  @gestos.swipe(:start_x => 965, :start_y => 973, :end_x => 235, :end_y => 1047, :duration => 1000).perform
-  @gestos.swipe(:start_x => 965, :start_y => 973, :end_x => 235, :end_y => 1047, :duration => 1000).perform
-when 3
-  @gestos.swipe(:start_x => 965, :start_y => 973, :end_x => 235, :end_y => 1047, :duration => 1000).perform
-  @gestos.swipe(:start_x => 965, :start_y => 973, :end_x => 235, :end_y => 1047, :duration => 1000).perform
+novo_num.times do
   @gestos.swipe(:start_x => 965, :start_y => 973, :end_x => 235, :end_y => 1047, :duration => 1000).perform
 end
-  sleep 1
+
 end
 
 def verifica_transicao(param)
